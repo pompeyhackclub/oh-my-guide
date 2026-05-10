@@ -81,7 +81,9 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="brand">
-          <span className="brand-mark" aria-hidden="true">⚓</span>
+          <span className="brand-mark" aria-hidden="true">
+            <img src="/brand.svg" alt="" />
+          </span>
           <div>
             <h1>Oh My Guide</h1>
             <p className="tagline">Things to do · Portsmouth</p>

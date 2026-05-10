@@ -14,7 +14,7 @@
 	justify-content: space-between;
 	gap: 16px;
 	padding: 14px 20px;
-	background: #FEFACD;
+	background: #fefacd;
 	border-bottom: 1px solid var(--border);
 	color: #383726;
 	--text: #383726;
@@ -29,18 +29,22 @@
 }
 
 .brand-mark {
-	font-size: 22px;
-	width: 42px;
-	height: 42px;
+	width: 44px;
+	height: 44px;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	border-radius: 14px;
-	background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
-	color: var(--bg-deep);
-	box-shadow:
-		var(--shadow-sm),
-		0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: var(--shadow-sm);
+	flex-shrink: 0;
+}
+
+.brand-mark img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
 }
 
 .brand h1 {
@@ -177,7 +181,7 @@
 	grid-template-columns: repeat(5, 1fr);
 	gap: 4px;
 	padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
-	background: #FEFACD;
+	background: #fefacd;
 	border-top: 1px solid var(--border);
 	box-shadow: 0 -10px 28px rgba(56, 55, 38, 0.18);
 	color: #383726;
@@ -753,6 +757,11 @@
 
 .distance-toggle input[type='checkbox'] {
 	accent-color: var(--accent);
+}
+
+.distance-toggle-hint {
+	color: var(--text-faint);
+	font-size: 12px;
 }
 
 .checklist-grid {

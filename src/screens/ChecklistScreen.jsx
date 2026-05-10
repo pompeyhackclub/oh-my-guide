@@ -85,9 +85,13 @@ export default function ChecklistScreen({ tasks, completed, userPosition, onOpen
 						type="checkbox"
 						checked={sortByDistance}
 						onChange={e => setSortByDistance(e.target.checked)}
-						disabled={!userPosition}
 					/>
-					<span>Nearest first</span>
+					<span>
+						Nearest first
+						{sortByDistance && !userPosition && (
+							<span className="distance-toggle-hint"> · waiting for GPS…</span>
+						)}
+					</span>
 				</label>
 			</div>
 
