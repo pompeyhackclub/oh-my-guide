@@ -3,6 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 100svh;
+	--nav-height: 72px;
 }
 
 .app-header {
@@ -100,7 +101,7 @@
 	min-height: 0;
 	display: flex;
 	flex-direction: column;
-	padding-bottom: calc(72px + env(safe-area-inset-bottom));
+	padding-bottom: calc(var(--nav-height) + env(safe-area-inset-bottom));
 }
 
 .screen {
@@ -294,7 +295,11 @@
 	content: '';
 	position: absolute;
 	inset: 0;
-	background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+	background: radial-gradient(
+		circle at 70% 30%,
+		rgba(255, 255, 255, 0.15) 0%,
+		transparent 60%
+	);
 	pointer-events: none;
 }
 
@@ -311,8 +316,17 @@
 .task-card-hero-with-image::before {
 	z-index: 1;
 	background:
-		linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%),
-		radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.12) 0%, transparent 60%);
+		linear-gradient(
+			to top,
+			rgba(0, 0, 0, 0.55) 0%,
+			rgba(0, 0, 0, 0.1) 60%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 70% 30%,
+			rgba(255, 255, 255, 0.12) 0%,
+			transparent 60%
+		);
 }
 
 .task-card-hero-with-image .task-card-emoji {
@@ -771,10 +785,6 @@
 }
 
 /* ================= Map screen ================= */
-/* Map tab is full-bleed below the header, ending at the floating bottom nav. */
-.app-main:has(.map-screen) {
-	padding-bottom: 0;
-}
 
 .map-screen {
 	padding: 0;
@@ -791,6 +801,8 @@
 	position: relative;
 	flex: 1;
 	min-height: 80vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .map-fill {
@@ -803,6 +815,7 @@
 	height: 100%;
 	min-height: 320px;
 	background: var(--surface-2);
+	flex: 1;
 }
 
 .map-recentre {
@@ -1064,7 +1077,11 @@
 	content: '';
 	position: absolute;
 	inset: 0;
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 60%);
+	background: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 0.55) 0%,
+		transparent 60%
+	);
 }
 
 .detail-hero-img {
@@ -1079,7 +1096,12 @@
 
 .detail-hero-with-image::before {
 	z-index: 1;
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.15) 60%, transparent 100%);
+	background: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 0.6) 0%,
+		rgba(0, 0, 0, 0.15) 60%,
+		transparent 100%
+	);
 }
 
 .detail-hero-with-image .detail-hero-emoji {
@@ -1459,7 +1481,11 @@
 	align-items: center;
 	justify-content: center;
 	font-size: 30px;
-	background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+	background: linear-gradient(
+		135deg,
+		var(--accent) 0%,
+		var(--accent-deep) 100%
+	);
 	color: var(--bg-deep);
 	box-shadow: var(--shadow-md);
 }
