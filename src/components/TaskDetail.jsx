@@ -92,7 +92,7 @@ export default function TaskDetail({
           <div className="detail-title-row">
             <h2 id="detail-title">{task.title}</h2>
             <span className="reward-pill detail-reward">
-              <span aria-hidden="true">⭐</span> {xpFor(task)} XP
+              <i className="fa-solid fa-star" style={{ color: "#fbbf24" }} aria-hidden="true" /> {xpFor(task)} XP
             </span>
           </div>
           <p className="detail-category">

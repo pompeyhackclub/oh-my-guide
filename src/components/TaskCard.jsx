@@ -94,11 +94,11 @@ export default function TaskCard({
 
         <div className="task-card-foot">
           <span className="reward-pill" title="Completion reward">
-            <span aria-hidden="true">⭐</span> {xpFor(task)} XP
+            <i className="fa-solid fa-star" style={{ color: "#fbbf24" }} aria-hidden="true" /> {xpFor(task)} XP
           </span>
           {dist != null && (
             <span className="task-card-distance">
-              <span aria-hidden="true">📍</span> {formatDistance(dist)}
+              <i className="fa-solid fa-map-pin" style={{ color: "#dc2626" }} aria-hidden="true" /> {formatDistance(dist)}
               {walk != null && <span> · {walk} min walk</span>}
             </span>
           )}
