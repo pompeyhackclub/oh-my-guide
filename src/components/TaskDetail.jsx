@@ -6,7 +6,7 @@ import {
   walkMinutes,
   xpFor,
 } from "../utils/derive.js";
-import { tasks as allTasks } from "../data/tasks.js";
+import { tasks as allTasks, PORTSMOUTH_CENTER } from "../data/tasks.js";
 
 export default function TaskDetail({
   task,
@@ -39,16 +39,20 @@ export default function TaskDetail({
   if (!task) return null;
 
   const meta = categoryMeta(task.category);
-  const dist = userPosition ? distanceMeters(userPosition, task) : null;
+  // Display distance always falls back to Portsmouth Center so dist is never null.
+  const referencePosition = userPosition ?? PORTSMOUTH_CENTER;
+  const dist = distanceMeters(referencePosition, task);
   const walk = walkMinutes(dist);
-  const withinRange = dist != null && dist <= CHECK_IN_RADIUS_M;
+  // Check-In verification uses the real GPS fix only.
+  const realDist = userPosition ? distanceMeters(userPosition, task) : null;
+  const withinRange = realDist != null && realDist <= CHECK_IN_RADIUS_M;
 
   const gpsLabel = (() => {
     if (geoStatus !== "watching")
       return "Enable location to verify check-in";
-    if (dist == null) return "Waiting for GPS…";
-    if (withinRange) return `You're within ${Math.round(dist)} m — verified ✓`;
-    return `${formatDistance(dist)} away — get closer to check in`;
+    if (realDist == null) return "Waiting for GPS… (estimated distance shown)";
+    if (withinRange) return `You're within ${Math.round(realDist)} m — verified ✓`;
+    return `${formatDistance(realDist)} away — get closer to check in`;
   })();
 
   return (

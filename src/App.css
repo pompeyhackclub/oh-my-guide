@@ -733,6 +733,11 @@
 	accent-color: var(--accent);
 }
 
+.distance-toggle-hint {
+	color: var(--text-faint);
+	font-size: 12px;
+}
+
 .checklist-grid {
 	display: flex;
 	flex-direction: column;
