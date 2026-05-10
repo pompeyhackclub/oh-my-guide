@@ -6,7 +6,7 @@
      #FCAB46  warm amber  — reward / XP / unlock
      #A34B14  rust        — primary accent (CTA, active states, brand)
   */
-	--bg: #3E8E7E; /* deep teal page bg */
+	--bg: #f5d68a; /* warm buttery yellow page bg — complements peach surfaces + rust accent */
 	--bg-deep: #ffffff; /* high-contrast text on accent fills */
 	--surface: #ffffff;
 	--surface-2: #fbf0df; /* pale peach card insets */
@@ -72,9 +72,22 @@ body {
 
 body {
 	background:
-		radial-gradient(1200px 600px at 85% -10%, rgba(252, 171, 70, 0.42), transparent 60%),
-		radial-gradient(900px 500px at -10% 110%, rgba(253, 246, 237, 0.55), transparent 60%),
-		radial-gradient(700px 500px at 50% 50%, rgba(163, 75, 20, 0.1), transparent 70%), var(--bg);
+		radial-gradient(
+			1200px 600px at 85% -10%,
+			rgba(252, 171, 70, 0.42),
+			transparent 60%
+		),
+		radial-gradient(
+			900px 500px at -10% 110%,
+			rgba(253, 246, 237, 0.55),
+			transparent 60%
+		),
+		radial-gradient(
+			700px 500px at 50% 50%,
+			rgba(163, 75, 20, 0.1),
+			transparent 70%
+		),
+		var(--bg);
 	background-attachment: fixed;
 }
 

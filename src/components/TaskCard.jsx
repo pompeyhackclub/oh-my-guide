@@ -61,11 +61,19 @@ export default function TaskCard({
     >
       <button
         type="button"
-        className="task-card-hero"
+        className={`task-card-hero ${task.imgSrc ? "task-card-hero-with-image" : ""}`}
         style={{ background: categoryGradient(task.category) }}
         onClick={() => onOpen(task.id)}
         aria-label={`Open ${task.title}`}
       >
+        {task.imgSrc && (
+          <img
+            className="task-card-hero-img"
+            src={task.imgSrc}
+            alt=""
+            loading="lazy"
+          />
+        )}
         <i className={`task-card-emoji ${icon}`} aria-hidden="true" />
         <span className="task-card-number">#{task.id}</span>
         <DifficultyChip difficulty={task.difficulty} className="task-card-difficulty" />

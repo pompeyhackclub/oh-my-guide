@@ -61,9 +61,17 @@ export default function TaskDetail({
     >
       <div className="detail-sheet" onClick={(e) => e.stopPropagation()}>
         <header
-          className="detail-hero"
+          className={`detail-hero ${task.imgSrc ? "detail-hero-with-image" : ""}`}
           style={{ background: categoryGradient(task.category) }}
         >
+          {task.imgSrc && (
+            <img
+              className="detail-hero-img"
+              src={task.imgSrc}
+              alt=""
+              loading="lazy"
+            />
+          )}
           <button
             type="button"
             className="detail-close"
