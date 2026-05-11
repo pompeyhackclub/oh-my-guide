@@ -1,16 +1,29 @@
-# React + Vite
+# Oh My Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Oh My Guide is an activity discovery website with just shy of 100 _quests_ to fulfil in and around Portsmouth.
 
-Currently, two official plugins are available:
+Made by [Rieona](https://github.com/rieo-waffle) with a little help from [Tom](https://github.com/CalmArms)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+You can play with it now at [omg.thomashewett.com](https://omg.thomashewett.com)
 
-## React Compiler
+<p align="center">
+  <img src="screenshots/screenshot_5.png" width="160" alt="Explore" />
+  <img src="screenshots/screenshot_1.png" width="160" alt="Map" />
+  <img src="screenshots/screenshot_2.png" width="160" alt="Checklist" />
+  <img src="screenshots/screenshot_3.png" width="160" alt="Achievements" />
+  <img src="screenshots/screenshot_4.png" width="160" alt="Profile" />
+</p>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## What you can do
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Discover Portsmouth** — 97 places to visit across the city, from harbour walks and historic ships to family parks, cafés, and quirky hidden corners.
+- **Check in when you arrive** — your phone knows when you've made it to a place and then you can tick the box to complete the quest.
+- **Level up as you explore** — every place you visit earns you points and gives you xp which in turn levels you up. Trickier spots are worth more.
+- **Five sections**:
+    - **Explore** — see what's nearby and get fresh suggestions.
+    - **Map** — see every place on a map of Portsmouth.
+    - **Checklist** — a tidy list to tick off, sorted by the kind of thing it is.
+    - **Achievements** — unlock badges as you finish off categories or hit milestones.
+    - **Profile** — a quick look at how far you've come.
+- **Surprise badges** — finish a set of places and a little reward pops up to celebrate.
+- **See how far you've got** — every category shows a progress ring, so you know if you're nearly there.
